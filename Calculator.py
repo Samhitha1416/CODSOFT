@@ -18,26 +18,29 @@ print("Enter 3 for Multiply")
 print("Enter 4 for Divide")
 
 while True:
-    choice = input("Enter the Operation Number: ")
+    p = input("Enter the Operation Number: ")
 
-    if choice in ('1', '2', '3', '4'):
+    if p in ('1', '2', '3', '4'):
         try:
             x = float(input("Enter first number: "))
             y = float(input("Enter second number: "))
         except ValueError:
             print("Invalid input, Please enter a number.")
             continue
-
-        if choice == '1':
+        #for add
+        if p == '1':
             print(f"{x} + {y} = {add(x, y)}")
-
-        elif choice == '2':
+            
+        #for sub
+        elif p == '2':
             print(f"{x} - {y} = {sub(x, y)}")
-
-        elif choice == '3':
+            
+        #for mul
+        elif p == '3':
             print(f"{x} * {y} = {mul(x, y)}")
-
-        elif choice == '4':
+            
+        #for div
+        elif p == '4':
             print(f"{x} / {y} = {div(x, y)}")
         
         next = input("Let's do next calculation? (yes/no): ")
